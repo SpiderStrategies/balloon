@@ -44,3 +44,7 @@ See jade documentation
 ```bash
 make test ARGS="--from <FROM> --to <TO> --key <AWS_KEY> --secret <AWS_SECRET>"
 ```
+
+## License
+
+MIT
