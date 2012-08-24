@@ -50,8 +50,20 @@ describe('balloon', function () {
     })
   })
 
+  it('config cache setting should override node process env', function (done) {
+    balloon = new Balloon({
+      templateDirectory: path.join(__dirname, 'templates'),
+      cache: true // by default, we wouldn't cache since we aren't running in production
+    })
+    balloon.renderFile('hello', { locals: model }, function (err, result) {
+      assert(result)
+      assert(balloon.cache)
+      done()
+    })
+  })
+
   it('should read a fresh template when not in production', function (done) {
-    balloon.renderFile('hello', { locals: { users: { Linus: {type: 'Boxer' }}}}, function (err, result) {
+    balloon.renderFile('hello', { locals: model }, function (err, result) {
       assert(result)
       assert(!balloon.cache)
       done()
