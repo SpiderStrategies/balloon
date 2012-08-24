@@ -11,10 +11,8 @@
     "node-email",
     "node-email-templates",
     "node-mailer",
-    "jade",
-    "juice",
-    "inline",
-    "css"
+    "ses",
+    "jade"
   ],
   "author": "Nathan Bowser <nathan.bowser@spiderstrategies.com>",
   "license": "MIT",
