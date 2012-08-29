@@ -1,6 +1,6 @@
 {
   "name": "balloon",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A node.js module for sending beautiful emails using jade for templates.",
   "main": "lib/index.js",
   "repository": {

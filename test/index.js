@@ -21,6 +21,14 @@ describe('balloon', function () {
     })
   })
 
+  it('allows extension of jade templates', function (done) {
+    balloon.renderFile('balloon-extend', { }, function (err, result) {
+      assert(!err)
+      assert(result)
+      done()
+    })
+  })
+
   it('should cache templates in production', function (done) {
     process.NODE_ENV = 'production'
     balloon = new Balloon({
